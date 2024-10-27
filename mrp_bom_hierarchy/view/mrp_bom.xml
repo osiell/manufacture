@@ -17,7 +17,7 @@
                     type="object"
                     class="btn btn-link"
                     icon="fa-folder-open"
-                    attrs="{'invisible': [('has_bom', '!=', True)]}"
+                    invisible="not has_bom"
                 />
                 </xpath>
             </field>
@@ -58,7 +58,7 @@
                     type="object"
                     class="btn btn-link"
                     icon="fa-level-up"
-                    attrs="{'invisible': [('has_parent', '!=', True)]}"
+                    invisible="not has_parent"
                 />
                     <button
                     title="Child BoMs"
@@ -66,7 +66,7 @@
                     type="object"
                     class="btn btn-link"
                     icon="fa-level-down"
-                    attrs="{'invisible': [('has_child', '!=', True)]}"
+                    invisible="not has_child"
                 />
                     <field name="has_parent" invisible="1" />
                     <field name="has_child" invisible="1" />
@@ -79,7 +79,7 @@
                     type="object"
                     class="btn btn-link"
                     icon="fa-folder-open"
-                    attrs="{'invisible': [('product_has_other_bom', '!=', True)]}"
+                    invisible="not product_has_other_bom"
                 />
                 </field>
             </field>
